@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # why do we need comments
+cat /etc/hosts
 VAR1=$(grep -c -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\s\s*localhost' /etc/hosts)
 if [ "$VAR1" -gt 0 ]; then
     sed -i 's/.*localhost$/127.0.0.2  localhost/' /etc/hosts
