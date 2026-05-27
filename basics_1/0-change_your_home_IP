@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # why do we need comments
-echo "----------------------------------"
-cat /etc/hosts
 VAR1=$(grep -c -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+[[:space:]]+localhost' /etc/hosts)
 if [ "$VAR1" -gt 0 ]; then
     sed -E 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+[[:space:]]+localhost/127.0.0.2  localhost/' /etc/hosts
@@ -14,6 +12,3 @@ if [ "$VAR2" -gt 0 ]; then
 else
     echo "8.8.8.8  facebook.com" >> /etc/hosts
 fi
-echo "----------------------------------"
-cat /etc/hosts
-echo "----------------------------------"
