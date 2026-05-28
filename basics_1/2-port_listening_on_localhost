@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# why do we need comments
+nc -l 98
